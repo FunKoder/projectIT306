@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu</title>
+</head>
+<link rel="stylesheet" type="text/css" href="template.css">
+<body>
+	<header>
+		<h1>What would you like?</h1>
+	</header>
+
+	<div class="contents">
+		<h1 id="txt1">Menu</h1>
+		<div class="type">
+			<button onclick="">Food</button>
+			<button onclick="">Drinks</button>
+			<button onclick="">Desserts</button>
+		</div>
+
+		<div class="foodgroup">
+			<div class="fooditem">
+
+			</div>
+
+			<div class="fooditem">
+
+			</div>
+
+			<div class="fooditem">
+
+			</div>
+
+			<div class="fooditem">
+
+			</div>
+		</div>
+	</div>
+
+	<nav>
+		<a href="/Transaction">Submit Order</a>
+	</nav>
+
+</body>
+</html>
