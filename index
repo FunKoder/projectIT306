@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello!</title>
+</head>
+ <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<body>
+	<div class="boxmid">
+		<h1>WELCOME!</h1>
+		<h3>to</h3>
+		<h4>Feastery</h4>
+	</div>
+		<a href="/Menu">Order here</a>
+</body>
+</html>
