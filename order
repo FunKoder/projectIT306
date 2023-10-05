@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Complete Order</title>
+</head>
+<link rel="stylesheet" type="text/css" href="template.css">
+<body>
+	<header>
+		<h3>Price</h3>
+		<h3>Amount</h3>
+	</header>
+
+	<div class="box">
+
+	</div>
+
+	<nav>
+		<a href="/Menu">Back</a>
+		<a href="/Order">Next</a>
+	</nav>
+</body>
+</html>
