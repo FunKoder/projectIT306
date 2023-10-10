@@ -4,6 +4,7 @@ body{
 	align-items:center;
 	flex-direction: column;
 	height: 100vh;
+	background-color: dodgerblue;
 }
 .boxmid{
 	display: flex;
@@ -17,16 +18,20 @@ body{
 	font-size: 64px;
 	border-radius: 12px;
 	line-height: 0.1;
+	color: white;
 }
 a{
 	padding: 24px;
 	font-size: 24px;
 	border-radius: 6px;
-	background-color: gray;
+	background-color: white;
+	color: dodgerblue;
 	text-decoration: none;
-	color: white;
 	transition: all 0.2s;
 }
 a:hover{
-	font-size: 28px;
+
+	border: solid 2px white;
+	background-color: dodgerblue;
+	color: white;
 }
