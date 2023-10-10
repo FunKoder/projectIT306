@@ -1,0 +1,71 @@
+body{
+	margin: 0;
+	height: 100%;
+}
+h1{
+	color: white;
+}
+.display{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	row-gap: 100px;
+	flex-direction: column;
+	align-items: center;
+	background-color: dodgerblue;
+
+}
+.ordered{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+table{
+	border: solid 2px white;
+	background: dodgerblue;
+	border-collapse: collapse;
+}
+th{
+	border: solid 2px white;
+	padding: 12px;
+	text-align: center;
+	background-color: dodgerblue;
+	color: white;
+}
+td{
+	background-color: white;
+	border: solid 1px gray;
+  	padding: 8px;	
+}
+#z{
+	border: solid 2px dodgerblue;
+	border-radius: 5px;
+	background-color: white;
+	color: dodgerblue;
+	text-decoration: none;
+	padding: 6px;
+	margin-top: 50px;
+}
+#z:hover{
+	border: solid 2px white;
+	background-color: dodgerblue;
+	color: white;
+}
+nav a{
+	border: solid 2px dodgerblue;
+	border-radius: 5px;
+	background-color: white;
+	color: dodgerblue;
+	text-decoration: none;
+	padding: 6px;
+}
+a{
+	text-decoration: none;
+	color: dodgerblue;
+	background-color: white;
+}
+a:hover{
+	color: dodgerblue;
+	text-shadow: 0px 0px 5px lightblue;
+}
