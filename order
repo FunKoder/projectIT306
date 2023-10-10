@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Complete Order</title>
+	<title>Order</title>
 </head>
-<link rel="stylesheet" type="text/css" href="template.css">
+ <link rel="stylesheet" href="{{ url_for('static', filename='styles3.css') }}">
 <body>
-	<header>
-		<h3>Price</h3>
-		<h3>Amount</h3>
-	</header>
-
-	<div class="box">
-
+	
+	<div class="display">
+		<h1>Your Order:</h1>
+			<div class="ordered">
+			    <table>
+			        <tr>
+				        <th>Order Id</th>
+				        <th>Food</th>
+				        <th>Drink</th>
+				        <th>Dessert</th>
+				        <th>Price</th>
+						<th>Amount</th>
+			        </tr>
+			        {% for x in order: %}
+			        <tr>
+				        <td>{{ x[0] }}</td>
+				        <td>{{ x[1] }}</td>
+				        <td>{{ x[2] }}</td>
+				        <td>{{ x[3] }}</td>
+				        <td>{{ x[4] }}</td>
+						<td>{{ x[5] }}</td>
+				        <td><a href="/edit/{{ x[0] }}">Edit</a></td>
+				        <td><a href="/deleteorder/{{ x[0] }}">Delete</a></td>
+		        	</tr>
+		        	{% endfor %}
+		    	</table>
+		    		<a href="/Menu" id="z">Add another order here</a>
+			</div>
+			<nav>
+				<a href="/Thankyou">Submit Order</a>
+			</nav>
 	</div>
 
-	<nav>
-		<a href="/Menu">Back</a>
-		<a href="/Order">Next</a>
-	</nav>
+	
 </body>
+
 </html>
