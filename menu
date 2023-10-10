@@ -1,44 +1,93 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Menu</title>
-</head>
-<link rel="stylesheet" type="text/css" href="template.css">
-<body>
-	<header>
-		<h1>What would you like?</h1>
-	</header>
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Menu</title>
+	</head>
+	 <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+	<body>
+		<header>
+			<h1>What would you like?</h1>
+			<h2>You can only select 1 each category</h2>
+		</header>
 
-	<div class="contents">
-		<h1 id="txt1">Menu</h1>
-		<div class="type">
-			<button onclick="">Food</button>
-			<button onclick="">Drinks</button>
-			<button onclick="">Desserts</button>
+		<div class="contents">
+			<h1 id="txt1">Menu</h1>
+			<div class="minicontent">
+				<div class="type">
+					<h3>Foods</h3>
+					<h3>Drinks</h3>
+					<h3>Desserts</h3>
+				</div>
+
+				<div class="groups">
+					<div class="foodgroup">
+						<div class="item">
+							<img src="https://res.cloudinary.com/sonic-drive-in/image/upload/c_fit,w_600,h_600,dpr_2,f_auto,q_auto/v1632936124/oa_menu/products/menuproduct_Cheeseburger_Plain.png">
+							<p>Cheese Burger</p>
+							<p>Costs: ₱45.00</p>
+						</div>
+
+						<div class="item">
+							<img src="https://png.pngtree.com/png-vector/20230413/ourmid/pngtree-salad-bowl-healthy-food-png-image_6704831.png">
+							<p>Good Salad</p>
+							<p>Costs: ₱35.00</p>
+						</div>
+					</div>
+
+					<div class="drinkgroup">
+						<div class="item">
+							<img src="https://res.cloudinary.com/sonic-drive-in/image/upload/c_fit,w_600,h_600,dpr_2,f_auto,q_auto/v1513280263/oa_menu/products/menuproduct-water.png">
+							<p>Tasty Water</p>
+							<p>Costs: ₱5.00</p>
+						</div>
+
+						<div class="item">
+							<img src="https://static.vecteezy.com/system/resources/previews/023/337/456/non_2x/ai-generative-coca-cola-can-transparent-free-png.png">
+							<p>Softdrink</p>
+							<p>Costs: ₱25.00</p>
+						</div>
+					</div>
+
+					<div class="dessertgroup">
+						<div class="item">
+							<img src="https://s3-ap-southeast-1.amazonaws.com/cdn.dairyqueenthailand.com/images/1558601199.png">
+							<p>Almond sundae</p>
+							<p>Costs: ₱38.00</p>
+						</div>
+
+						<div class="item">
+							<img src="https://www.dairyqueen.com/dA/0932b4c147/DQ-strawberry-sundae.png">
+							<p>Pink sunday</p>
+							<p>Costs: ₱32.00</p>
+						</div>
+						</div>
+				</div>
+			</div>
+
 		</div>
 
-		<div class="foodgroup">
-			<div class="fooditem">
+		<form action="/getorder" method="post">
+				<label>Select your desired Food</label>
+				<select name="food" id="food">
+					<option value="Cheese Burger">Cheese Burger</option>
+					<option value="Good Salad">Good Salad</option>
+				</select>
 
-			</div>
+				<label>Select your desired Drink</label>
+				<select name="drink" id="drink">
+					<option value="Tasty Water">Tasty Water</option>
+					<option value="Softdrink">Softdrink</option>
+				</select>
 
-			<div class="fooditem">
+				<label>Select your desired Dessert</label>
+				<select name="dessert" id="dessert">
+					<option value="Almond sundae">Almond sundae</option>
+					<option value="Pink sunday">Pink sunday</option>
+				</select>
 
-			</div>
-
-			<div class="fooditem">
-
-			</div>
-
-			<div class="fooditem">
-
-			</div>
-		</div>
-	</div>
-
-	<nav>
-		<a href="/Transaction">Submit Order</a>
-	</nav>
-
-</body>
-</html>
+				<label>Amount</label>
+				<input type="number" name="amount" value="1" min="1" max="99">
+				<input type="submit" name="submit">
+			</form>
+	</body>
+	</html>
